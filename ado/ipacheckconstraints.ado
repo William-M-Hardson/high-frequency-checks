@@ -257,7 +257,7 @@ program ipacheckconstraints, rclass
 					export excel using "`outfile'", first(varl) sheet("`outsheet'") `sheetreplace'
 
 					ipacolwidth using "`outfile'", sheet("`outsheet'")
-					ipacolformat using "`outfile'", sheet("`outsheet'") vars("`date'") format("date_d_mon_yy")
+					cap ipacolformat using "`outfile'", sheet("`outsheet'") vars("`date'")
 					iparowformat using "`outfile'", sheet("`outsheet'") type(header)
 				}
 			}
